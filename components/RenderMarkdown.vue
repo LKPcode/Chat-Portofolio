@@ -1,0 +1,63 @@
+<template>
+      <div class="markdown-body">
+            <div class="mx-auto" ref="markdownContent">
+                <!-- Markdown Content -->
+            </div>
+            </div>
+</template>
+
+
+<script setup>
+
+let props = defineProps(['markdownContent']);
+
+
+let markdownContent = ref();
+
+
+const options = {
+                    htmlTags: true, // Enables HTML tags in source
+                    htmlSanitize: false, // Disables HTML tag sanitization
+                };
+
+
+onMounted( async () => {
+
+    let script = document.createElement('script');
+    script.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@1.0.40/es5/bundle.js";
+    document.head.append(script);
+
+    script.onload = function() {
+      const isLoaded = window.loadMathJax();
+      if (isLoaded) {
+        console.log('Styles loaded!')
+      }
+
+      if (markdownContent) {
+        // const html = window.render(text, options);
+        // el.outerHTML = html;
+        // console.log('text', text);
+        renderLikeStream(props.markdownContent);
+      }
+    };
+
+});
+
+let renderLikeStream = async (text) => {
+    // split the text into words
+    const words = text.split(' ');
+    let stream = '';
+    // for every word add to the stream and render
+    for (let i = 0; i < words.length; i++) {
+        stream += words[i] + ' ';
+        // console.log('stream', stream);
+        const html = window.render(stream, options);
+        markdownContent.value.innerHTML = html;
+        await new Promise(r => setTimeout(r, 10));
+    }
+}
+
+
+
+
+</script>
