@@ -1,3 +1,3 @@
 <script setup>
-    await navigateTo('/me');
+    await navigateTo('/Hi-I-am-Loukas');
 </script>
