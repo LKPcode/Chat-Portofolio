@@ -80,8 +80,7 @@
 
 <script setup>
 
-
-let showMobileSidebar = ref(true);
+let showMobileSidebar = ref(false);
 let route = useRoute();
 
 

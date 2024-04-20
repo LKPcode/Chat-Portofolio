@@ -117,7 +117,8 @@ let projects = ref([
         name: 'Chat Portofolio',
         description: 'Describe the project called Project 7',
         id: 'Chat-Portofolio'
-    }
+    },
+    
 ])
 
 

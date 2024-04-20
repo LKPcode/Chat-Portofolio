@@ -1,6 +1,8 @@
 
 <template>
-     <main class="relative h-full">
+     <main id="main-chat" class="relative h-[calc(100vh-65px)] overflow-auto flex flex-col-reverse transition-width">
+
+      <div class="flex-grow flex flex-col transition-width duration-200">
 
 
       <div v-if="route.params.project=='Hi-I-am-Loukas'" class="pl-8 pr-4 md:px-0 py-5 bg-gray-50">
@@ -20,7 +22,8 @@
         </div>
         </div>
 
-        <div class="ml-8 mr-4 relatve md:mx-auto max-w-2xl pt-4 px-4 sm:px-6 lg:px-8  min-h-full">
+<div class="flex-grow w-full">
+        <div class="ml-8 mr-4 relatve md:mx-auto max-w-2xl pt-4 px-4 sm:px-6 lg:px-8  ">
           <div class="absolute -ml-9 w-6 h-6 rounded-full bg-gray-300"></div>
             <span class="font-semibold">Portofolio AI</span>
             <!-- Your content -->
@@ -29,13 +32,13 @@
               <RenderMarkdown :key="text" :markdownContent="text" />
           </div>
         </div>
+</div>
 
-
+       
         <PredefinedAnswer v-for="prompt_ in promptHistory" :prompt="prompt_" />
 
-
-        <div class="sticky max-w-2xl mx-auto bottom-0 p-5 pt-2 bg-white">
-        <div class="">
+        <div class="sticky  bottom-0 p-5 pt-2 bg-white">
+        <div class="max-w-2xl mx-auto">
             <input placeholder="Ask a question..."
                   @keyup.enter="addQuestion"
                   v-model="prompt"  
@@ -43,7 +46,7 @@
         </div>
         </div>
 
-        
+      </div>
 
     </main>
 
@@ -73,12 +76,9 @@ watch( () => route.params, async (params) => {
 let addQuestion = async () => {
     promptHistory.value.push(prompt.value);
     prompt.value = '';
-    for (let i = 0; i < 50; i++) {
-      await new Promise(r => setTimeout(r, 100));
-      window.scrollTo(0, document.body.scrollHeight);
-    }
-    
-
+    // scroll to bottom
+    const main = document.getElementById('main-chat');
+    main.scrollTo(0,0)
 }
 
 
@@ -98,6 +98,10 @@ let getProject = async (project) => {
     // update the paths in the markdown
     content = updateMarkdownPaths(content, project);
     console.log('text', content);
+
+    // let main = document.getElementById('main-chat');
+    // main.scrollTop = -1000000;
+
     return content;
 }
 
