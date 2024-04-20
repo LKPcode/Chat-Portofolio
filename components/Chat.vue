@@ -1,11 +1,16 @@
 
 <template>
-     <main id="main-chat" class="relative h-[calc(100vh-65px)] overflow-auto flex flex-col-reverse transition-width">
+     <main id="main-chat" 
+           class="relative h-[calc(100vh-65px)] overflow-auto flex flex-col-reverse transition-width"
+           style="overflow-anchor: auto !important;"
+           >
 
-      <div class="flex-grow flex flex-col transition-width duration-200">
+      <div class="flex-grow flex flex-col transition-width duration-200"
+            style="transform: translateZ(0);"      
+      >
 
 
-      <div v-if="route.params.project=='Hi-I-am-Loukas'" class="pl-8 pr-4 md:px-0 py-5 bg-gray-50">
+      <div v-if="route.params.project=='Hi-I-am-Loukas'" class="pl-8 pr-4 md:px-0 py-5 bg-gray-50 dark:bg-slate-800 dark:text-white">
         <div class="relative mx-auto max-w-2xl  px-4 sm:px-6 lg:px-8 min-h-full"> 
             <div class="absolute -ml-9 w-6 h-6 rounded-full bg-orange-500"></div>
             <span class="font-semibold">You</span>
@@ -14,7 +19,7 @@
             </div>
         </div>
         </div>
-        <div v-else class="pl-8 pr-4 md:px-0 py-5 bg-gray-50">
+        <div v-else class="pl-8 pr-4 md:px-0 py-5 bg-gray-50  dark:bg-slate-800 dark:text-white">
         <div class="relative mx-auto max-w-2xl  px-4 sm:px-6 lg:px-8 min-h-full"> 
             <div class="absolute -ml-9 w-6 h-6 rounded-full bg-orange-500"></div>
             <span class="font-semibold">You</span>
@@ -22,10 +27,10 @@
         </div>
         </div>
 
-<div class="flex-grow w-full">
+<div class="flex-grow w-full dark:bg-slate-700">
         <div class="ml-8 mr-4 relatve md:mx-auto max-w-2xl pt-4 px-4 sm:px-6 lg:px-8  ">
-          <div class="absolute -ml-9 w-6 h-6 rounded-full bg-gray-300"></div>
-            <span class="font-semibold">Portofolio AI</span>
+          <div class="absolute -ml-9 w-6 h-6 rounded-full bg-gray-300 dark:bg-slate-200"></div>
+            <span class="font-semibold dark:text-white">Portofolio AI</span>
             <!-- Your content -->
             <div class="mb-12">
             <!-- Markdown -->
@@ -37,12 +42,12 @@
        
         <PredefinedAnswer v-for="prompt_ in promptHistory" :prompt="prompt_" />
 
-        <div class="sticky  bottom-0 p-5 pt-2 bg-white">
+        <div class="sticky  bottom-0 p-5 pt-2 bg-white dark:bg-slate-700">
         <div class="max-w-2xl mx-auto">
             <input placeholder="Ask a question..."
                   @keyup.enter="addQuestion"
                   v-model="prompt"  
-                  class="block font-light w-full mx-auto p-3 px-4 rounded-xl ring-1 ring-orange-500 bg-gray-50 ring-inset outline-none" type="text" >
+                  class="block font-light w-full mx-auto p-3 px-4 rounded-xl ring-1 ring-orange-500 bg-gray-50 dark:bg-slate-800 dark:text-white ring-inset outline-none" type="text" >
         </div>
         </div>
 

@@ -1,5 +1,5 @@
 <template>
-      <div class="markdown-body">
+      <div class="">
             <div class="mx-auto" ref="markdownContent">
                 <!-- Markdown Content -->
             </div>
@@ -41,6 +41,7 @@ onMounted( async () => {
       }
     };
 
+    setThemeClass();
 });
 
 let renderLikeStream = async (text) => {
@@ -58,6 +59,15 @@ let renderLikeStream = async (text) => {
 }
 
 
+let setThemeClass = () => {
+    // Add or remove the dark class from the html element
+    let theme = document.documentElement.getAttribute('class');
+    if (theme === 'dark') {
+        markdownContent.value.classList.add('markdown-body-dark');
+    } else {
+        markdownContent.value.classList.add('markdown-body-light');
+    }
+}
 
 
 </script>

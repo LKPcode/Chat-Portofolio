@@ -1,5 +1,5 @@
 <template>
-        <div class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-gray-50 px-6 pb-4">
+        <div class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 dark:border-slate-900 bg-gray-50 dark:bg-slate-800 px-6 pb-4">
       <div class="flex h-16 shrink-0 items-center">
         <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=orange&shade=600" alt="Your Company">
         <div class="pl-4 text-xl font-semibold text-orange-600">Chat Portofolio</div>
@@ -11,11 +11,11 @@
  
               <li v-for="project in profile" >
                 <NuxtLink :to="`/${project.id}`" 
-                :class="{'text-orange-600 bg-gray-100': selectedProject === project.id, 'text-gray-700 hover:text-orange-600 hover:bg-gray-100': selectedProject !== project.id}"
-                class="text-gray-700 hover:text-orange-600 hover:bg-gray-100 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                :class="{'text-orange-600 bg-gray-100 dark:bg-slate-700': selectedProject === project.id, 'text-gray-700 dark:text-slate-200 hover:text-orange-600 hover:bg-gray-100': selectedProject !== project.id}"
+                class="text-gray-700 hover:text-orange-600 hover:bg-gray-100 hover:dark:bg-slate-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                   <span 
                   :class="{'text-orange-600 border-orange-600': selectedProject === project.id}"
-                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-orange-600 group-hover:text-orange-600">
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white dark:bg-slate-800 text-gray-400 border-gray-200 group-hover:border-orange-600 group-hover:text-orange-600">
                     {{ project.name.charAt(0) }}
                   </span>
                   <span class="truncate"> {{ project.name }} </span>
@@ -31,11 +31,11 @@
 
               <li v-for="project in projects" >
                 <NuxtLink :to="`/${project.id}`" 
-                :class="{'text-orange-600 bg-gray-100': selectedProject === project.id, 'text-gray-700 hover:text-orange-600 hover:bg-gray-100': selectedProject !== project.id}"
-                class="text-gray-700 hover:text-orange-600 hover:bg-gray-100 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                :class="{'text-orange-600 bg-gray-100 dark:bg-slate-700': selectedProject === project.id, 'text-gray-700 dark:text-slate-200 hover:text-orange-600 hover:bg-gray-100': selectedProject !== project.id}"
+                class="text-gray-700 hover:text-orange-600 hover:bg-gray-100 hover:dark:bg-slate-700 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                   <span 
                   :class="{'text-orange-600 border-orange-600': selectedProject === project.id}"
-                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-orange-600 group-hover:text-orange-600">
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white dark:bg-slate-800 text-gray-400 dark:text-white border-gray-200 group-hover:border-orange-600 group-hover:text-orange-600">
                     {{ project.name.charAt(0) }}
                   </span>
                   <span class="truncate"> {{ project.name }} </span>
