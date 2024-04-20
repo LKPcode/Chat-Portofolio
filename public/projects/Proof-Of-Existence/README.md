@@ -38,5 +38,5 @@ The aim for this project was to familiarize myself with the Ethereum blockchain,
 
 <!-- 50% width -->
 <p align="center">
-  <img src="./screenshots/4.png" width="45%" />
+<img src="./projects/Proof-Of-Existence/screenshots/4.png" width="45%" />
 </p>

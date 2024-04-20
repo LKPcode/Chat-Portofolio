@@ -76,7 +76,7 @@
     font-weight: 600;
     padding-bottom: .3em;
     font-size: 2em;
-    border-bottom: 1px solid #21262d;
+    border-bottom: 1px solid #1e293b;
   }
   
   .markdown-body-dark mark {
@@ -211,6 +211,7 @@
   .markdown-body-dark td,
   .markdown-body-dark th {
     padding: 0;
+    background-color: #1e293b;
   }
   
   .markdown-body-dark details summary {
@@ -285,7 +286,7 @@
     font-weight: 600;
     padding-bottom: .3em;
     font-size: 1.5em;
-    border-bottom: 1px solid #21262d;
+    border-bottom: 1px solid #1e293b;
   }
   
   .markdown-body-dark h3 {
@@ -575,7 +576,7 @@
   .markdown-body-dark table th,
   .markdown-body-dark table td {
     padding: 6px 13px;
-    border: 1px solid #30363d;
+    border: 1px solid #334155;
   }
   
   .markdown-body-dark table td>:last-child {
@@ -584,7 +585,7 @@
   
   .markdown-body-dark table tr {
     background-color: #0d1117;
-    border-top: 1px solid #21262d;
+    border-top: 1px solid #334155;
   }
   
   .markdown-body-dark table tr:nth-child(2n) {

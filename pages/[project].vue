@@ -12,10 +12,10 @@
       class="fixed inset-0 flex transition ease-in-out duration-300 transform">
       <div class="relative mr-16 flex w-full max-w-xs flex-1">
 
-        <div @click="toggleMobileSidebar" class="absolute bg-white left-full top-0 flex w-16  justify-center py-5">
+        <div @click="toggleMobileSidebar" class="absolute bg-white dark:bg-slate-800 rounded-br-lg left-full top-0 flex w-16  justify-center py-5">
           <button type="button" class="-m-2.5 p-2.5">
             <span class="sr-only">Close sidebar</span>
-            <svg class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <svg class="h-6 w-6 text-black dark:text-white " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>

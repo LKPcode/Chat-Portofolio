@@ -1,8 +1,9 @@
 # Loukas - Full Stack Developer
 
 
-## Professional Summary
-Innovative and detail-oriented Full Stack Developer with over 3 years of experience in designing, developing, and managing complex web applications and backend services. Proficient in a wide range of programming languages and tools, specializing in both front-end and back-end technologies, and a strong ability to translate business requirements into technical solutions.
+<img src="./profile.jpg" class='profile-pic'>
+Innovative and detail-oriented Full Stack Developer with over 3 years of experience in designing, developing, and managing complex web applications and backend services. Proficient in a wide range of programming languages and tools, specializing in both front-end and back-end technologies, and a strong ability to translate business requirements into technical solutions. Passionate about creating high-quality, user-friendly applications and staying up-to-date with the latest technologies and trends in the industry.
+
 
 
 ## Technical Skills

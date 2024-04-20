@@ -1,5 +1,4 @@
 # On The Spot
----
 
 On The Spot is a web application that makes spot trading on Binance easier. It allows users to trade cryptocurrencies in a more efficient way by providing a simple and intuitive interface. Reallocation of funds is made easy by just a few clicks. 
 

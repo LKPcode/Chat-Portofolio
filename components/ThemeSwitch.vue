@@ -94,8 +94,12 @@ let toggleDarkMode = () => {
 }
 
 .checkbox:checked ~ .slider {
-  background-color: var(--light);
+  background-color: #f3f4f6;
 }
+/* 
+.checkbox:checked ~ .switch-label {
+  border: 3px solid #f3f4f6;
+} */
 
 .slider::before {
   content: "";
@@ -116,7 +120,7 @@ let toggleDarkMode = () => {
   -webkit-transform: translateX(50px);
   -ms-transform: translateX(50px);
   transform: translateX(50px);
-  background-color: var(--dark);
+  background-color: #f97315;
   -webkit-box-shadow: none;
   box-shadow: none;
 }

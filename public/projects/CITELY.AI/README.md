@@ -1,5 +1,5 @@
 # CITELY.AI
----
+
 Citely.ai is a SaaS platform designed to enhance the research process for students and researchers by utilizing the capabilities of advanced Large Language Models like ChatGPT. We aim to streamline the management of extensive research data, facilitating easier comprehension, organization, and discovery of new scientific knowledge.
 
 This initiative was launched after being selected for the [EGG Incubator](https://www.theegg.gr/en/) program by EuroBank in Greece. The development team consisted of two members; I took on the role of lead developer, overseeing the UI/UX design, Architecture Design, Frontend, and Backend development. My colleague focused on the Natural Language Processing (NLP) components (LLM Agents). Although Citely.ai did not advance to the final stage of the incubation program, it provided a valuable opportunity for professional growth and collaboration with a talented team.
@@ -36,10 +36,10 @@ The login page is the first page users see when they visit the Web App. Users ca
 
 The main page is where users can manage and create Workspaces where in they can save articles, search for new articles, and interact with the Chat Interface.
 
----
+
 ![Citely.ai](./screenshots/main.png)
 
----
+
 
 ### Workspace
 
@@ -47,7 +47,7 @@ The Workspace is where users can see their recent activity, saved articles, and 
 
 ![Citely.ai](./screenshots/workspace.png)
 
----
+
 
 ### Article Search
 
@@ -55,7 +55,7 @@ Users can search for articles using the Semantic Scholar API and save them to th
 
 ![Citely.ai](./screenshots/search.png)
 
----
+
 
 ### PDF Viewer
 
@@ -63,7 +63,7 @@ Users can view the PDF of the articles they have saved in their workspace. They 
 
 ![Citely.ai](./screenshots/pdf.png)
 
----
+
 
 ### Chat Interface
 
@@ -71,19 +71,19 @@ This is the most important feature of the platform. Users can interact with thei
 
 ![Citely.ai](./screenshots/chat.png)
 
----
+
 
 The chat interface supports live rendering of LaTex, Chemical Equations, and other scientific notations. This was the most interesting part of the project as it required a lot of work to get the rendering right and support Adaptable UI functionalities extending the functionalities of the ChatGPT interface
 
 ![Citely.ai](./screenshots/chat_js.png)
 
----
+
 
 The platform supports rendering of Chemical Equations.
 
 ![Citely.ai](./screenshots/chat_chem.png)
 
----
+
 
 The platform also supports rendering of LaTex equations.
 
@@ -96,7 +96,7 @@ Users can manage their account settings, subscription plans, and other relevant 
 
 ![Citely.ai](./screenshots/settings.png)
 
----
+
 
 ### Payment Processing
 
