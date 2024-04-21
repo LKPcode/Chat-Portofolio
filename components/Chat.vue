@@ -1,13 +1,10 @@
 
 <template>
+      <!-- A display 'flex column-reverse' or 'block' gets added to the main element depending if streamChat is true or false -->
      <main id="main-chat" 
-           class="relative h-[calc(100vh-65px)] overflow-auto flex flex-col-reverse transition-width"
-           style="overflow-anchor: auto !important;"
-           >
+           class="scroll-bar relative h-[calc(100vh-65px)] flex overflow-auto transition-width">
 
-      <div class="flex-grow flex flex-col transition-width duration-200"
-            style="transform: translateZ(0);"      
-      >
+      <div id="main-chat-child" class="flex-grow flex flex-col transition-width duration-200">
 
 
       <div v-if="route.params.project=='Hi-I-am-Loukas'" class="pl-8 pr-4 md:px-0 py-5 bg-gray-50 dark:bg-slate-800 dark:text-white">
@@ -23,13 +20,13 @@
         <div class="relative mx-auto max-w-2xl  px-4 sm:px-6 lg:px-8 min-h-full"> 
             <div class="absolute -ml-9 w-6 h-6 rounded-full bg-orange-500"></div>
             <span class="font-semibold">You</span>
-            <div class="mt-1">Describe the project called {{ route.params.project }}</div>
+            <div class="mt-1">Describe the project called {{ route.params.project }} </div>
         </div>
         </div>
 
 <div class="flex-grow w-full dark:bg-slate-700">
         <div class="ml-8 mr-4 relatve md:mx-auto max-w-2xl pt-4 px-4 sm:px-6 lg:px-8  ">
-          <div class="absolute -ml-9 w-6 h-6 rounded-full bg-gray-300 dark:bg-slate-200"></div>
+          <div class="absolute -ml-9 w-6 h-6 rounded-full bg-gray-300 dark:bg-slate-300"></div>
             <div class="font-semibold dark:text-white flex justify-between items-center">
              <span>Portofolio AI</span> 
              <a href="https://github.com/LKPcode" target="_blank" >
@@ -49,7 +46,7 @@
        
         <PredefinedAnswer v-for="prompt_ in promptHistory" :prompt="prompt_" />
 
-        <div class="sticky  bottom-0 p-5 pt-2 bg-white dark:bg-slate-700">
+        <div class="sticky  bottom-0 px-5 pt-2 bg-white dark:bg-slate-700">
           <div class="max-w-2xl mx-auto relative">
               <input placeholder="Ask a question..."
                     @keyup.enter="addQuestion"
@@ -63,6 +60,9 @@
                   fill=""></path> </g></svg>
               </button>
             </div>
+          </div>
+          <div class="text-xs py-1.5 text-gray-400  text-center">
+            This is a Fake LLM Chatbot, every output is predefined.
           </div>
         </div>
 
@@ -79,12 +79,15 @@
 let route = useRoute();
 let prompt = ref('');
 let promptHistory = ref([]);
+let state = useGlobalState();
 
 const text = ref('')
 
 onMounted( async () => {
+   
     const project = route.params.project;
     text.value = await getProject(project);
+
 });
 
 watch( () => route.params, async (params) => {
@@ -98,13 +101,16 @@ let addQuestion = async () => {
     prompt.value = '';
     // scroll to bottom
     const main = document.getElementById('main-chat');
-    main.scrollTo(0,0)
+    if(state.streamChat.value === false) {
+        await new Promise(r => setTimeout(r, 300));
+        main.scrollTo({ top: 10000000, behavior: 'smooth' })
+    }else {
+        main.scrollTo(0,0)
+    }
 }
 
 
 let getProject = async (project) => {
-    // wait 1 seccond
-    await new Promise(r => setTimeout(r, 1000));
     // fetch /projects/test.md
     const response = await fetch(`/projects/${project}/README.md`);
     // get the text

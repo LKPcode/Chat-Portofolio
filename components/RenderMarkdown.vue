@@ -8,9 +8,12 @@
 
 
 <script setup>
+import useGlobalState from '../composables/useGlobalState';
+
 
 let props = defineProps(['markdownContent']);
 
+let state = useGlobalState();
 
 let markdownContent = ref();
 
@@ -34,9 +37,6 @@ onMounted( async () => {
       }
 
       if (markdownContent) {
-        // const html = window.render(text, options);
-        // el.outerHTML = html;
-        // console.log('text', text);
         renderLikeStream(props.markdownContent);
       }
     };
@@ -48,14 +48,29 @@ let renderLikeStream = async (text) => {
     // split the text into words
     const words = text.split(' ');
     let stream = '';
+
+
+    // wait 1 seccond
+    if (state.streamChat.value === true) {
+        await new Promise(r => setTimeout(r, 1000));
+    }
+
     // for every word add to the stream and render
     for (let i = 0; i < words.length; i++) {
+        // if the streamChat is false render the whole text at once
+        if(state.streamChat.value === false) {
+            const html = window.render(text, options);
+            markdownContent.value.innerHTML = html;
+            break;
+        }
         stream += words[i] + ' ';
         // console.log('stream', stream);
         const html = window.render(stream, options);
         markdownContent.value.innerHTML = html;
-        await new Promise(r => setTimeout(r, 60));
+        await new Promise(r => setTimeout(r, 40));
+
     }
+
 }
 
 

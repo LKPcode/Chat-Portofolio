@@ -1,7 +1,7 @@
 
-I'm sorry but as a *Fake* Large Language Model, which is trained on absolutely no data, I can't provide you with the answer to your question. I can only provide you with one pre-defined answer.
+I'm sorry but as a *Fake* Large Language Model, which was trained on absolutely no data, I can't provide you with the answer to your question. I can only provide you with one pre-defined answer.
 
-To see mode about Loukas's projects you can visit his [GitHub](https://github.com/LKPcode) page.
+To see more about Loukas's projects you can visit his [GitHub](https://github.com/LKPcode) page.
 
 Or select any of the following projects in the chat history to see more details:
 
