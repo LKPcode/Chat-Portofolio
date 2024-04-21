@@ -30,6 +30,11 @@ body {
   width: 120px;
 }
 
+.badges {
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 5px;
+}
 
 
 #setText>div {

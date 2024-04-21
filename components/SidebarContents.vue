@@ -116,6 +116,11 @@ let projects = ref([
         id: 'Reddit-Redesign'
     },
     {
+        name: 'Paper Organizer',
+        description: 'Describe the project called Project 7',
+        id: 'Paper-Organizer'
+    },
+    {
         name: 'ChatGPT color organizer',
         description: 'Describe the project called Project 4',
         id: 'chatgpt-color-organiser'
@@ -134,8 +139,7 @@ let projects = ref([
         name: 'DeLottery',
         description: 'Describe the project called Project 7',
         id: 'DeLottery'
-    },
-    {
+    },{
         name: 'Chat Portofolio',
         description: 'Describe the project called Project 7',
         id: 'Chat-Portofolio'
