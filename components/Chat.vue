@@ -62,7 +62,7 @@
             </div>
           </div>
           <div class="text-xs py-1.5 text-gray-400  text-center">
-            <span v-if="state.isBrowserCompatible()">This is a Fake LLM Chatbot, every output are predefined.</span>
+            <span v-if="state.browserIsCompatible">This is a Fake LLM Chatbot, every output are predefined.</span>
             <span v-else>For a better experience use a Chromium based browser or Firefox.</span>
           </div>
         </div>
