@@ -24,7 +24,7 @@ Loukas is an inovative and detail-oriented Full Stack Developer with over 3 year
 - **Languages & Frameworks:** Python (Flask, Django), Node.js (Express), PHP
 - **Databases:** PostgreSQL, MongoDB, Supabase
 - **Technologies:** Docker, Kubernetes, Systems Design, Blockchain
-- **Tools & Platforms:** Linux servers, AWS S3, Git, Security
+- **Tools & Platforms:** Linux servers, AWS S3, Git
 
 ### Additional Skills
 - **Data Analysis & Science:** Python (Pandas, NumPy, LangChain)

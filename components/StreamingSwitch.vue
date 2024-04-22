@@ -34,6 +34,7 @@ onMounted(() => {
         changeStreamMode();
     }else {
         state.streamChat.value = JSON.parse(localStorage.getItem('streamChat'));
+        state.browserIsCompatible.value = isBrowserCompatible();
         changeStreamMode();
     }
 });
