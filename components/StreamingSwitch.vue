@@ -21,8 +21,10 @@ let state = useGlobalState();
 
 let rand_id = Math.random().toString(36).substring(7);
 
-onMounted(() => {
-    
+onMounted( async () => {
+    await nextTick();
+    // wait 200 ms for the DOM to be updated
+    await new Promise(r => setTimeout(r, 200));
     // if localStorage is not set, set the default value, otherwise get the value 
     // based on browser compatibility from localStorage
     if(!localStorage.getItem('streamChat')) {
@@ -95,10 +97,10 @@ const isBrowserCompatible = () => {
 
         console.log('isBrowserCompatible', ((isOpera || isFirefox || isChrome || isEdgeChromium || isBlink) && (!isSafari || !isIE || !isEdge)))
 
-        // if everything is false
-        if(!isOpera && !isFirefox && !isChrome && !isEdgeChromium && !isBlink && !isSafari && !isIE && !isEdge) {
-            return true;
-        }
+        // // if everything is false
+        // if(!isOpera && !isFirefox && !isChrome && !isEdgeChromium && !isBlink && !isSafari && !isIE && !isEdge) {
+        //     return true;
+        // }
 
         return ((isOpera || isFirefox || isChrome || isEdgeChromium || isBlink) && (!isSafari || !isIE || !isEdge))
 
