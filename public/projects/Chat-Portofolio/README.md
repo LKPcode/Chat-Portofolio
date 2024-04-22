@@ -26,7 +26,7 @@ npm run dev
 ```
 
 
-> Safari WebKit is not supported yet as it does not render markdown images correctly. If a user is using Safari or IOS WebKit, the default is to disable chat streaming.
+Safari WebKit is not supported yet as it does not render markdown images correctly. If a user is using Safari or IOS WebKit, the default is to disable chat streaming.
 
 
 

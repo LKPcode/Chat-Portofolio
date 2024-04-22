@@ -84,41 +84,6 @@ const isBrowserCompatible = () => {
 
   return !(engine.name == 'WebKit')
 
-
-
-        // // Opera 8.0+
-        // var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-        // console.log('isOpera', isOpera)
-        // // Firefox 1.0+
-        // var isFirefox = typeof InstallTrigger !== 'undefined';
-        // // Safari 3.0+ "[object HTMLElementConstructor]" 
-        // var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
-        // console.log('isSafari', isSafari)
-        // // Internet Explorer 6-11
-        // var isIE = /*@cc_on!@*/false || !!document.documentMode;
-        // console.log('isIE', isIE)
-        // // Edge 20+
-        // var isEdge = !isIE && !!window.StyleMedia;
-        // console.log('isEdge', isEdge)
-        // // Chrome 1 - 79
-        // var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-        // console.log('isChrome', isChrome)
-        // // Edge (based on chromium) detection
-        // var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
-        // console.log('isEdgeChromium', isEdgeChromium)
-        // // Blink engine detection
-        // var isBlink = (isChrome || isOpera) && !!window.CSS;
-        // console.log('isBlink', isBlink)
-
-        // console.log('isBrowserCompatible', ((isOpera || isFirefox || isChrome || isEdgeChromium || isBlink) && (!isSafari || !isIE || !isEdge)))
-
-        // // // if everything is false
-        // // if(!isOpera && !isFirefox && !isChrome && !isEdgeChromium && !isBlink && !isSafari && !isIE && !isEdge) {
-        // //     return true;
-        // // }
-
-        // return ((isOpera || isFirefox || isChrome || isEdgeChromium || isBlink) && (!isSafari || !isIE || !isEdge))
-
 }
 
 </script>
