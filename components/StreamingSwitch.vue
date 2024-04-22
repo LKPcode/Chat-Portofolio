@@ -86,8 +86,8 @@ const isBrowserCompatible = () => {
         // Blink engine detection
         var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-        // return ((isOpera || isFirefox || isChrome || isEdgeChromium || isBlink) && (!isSafari || !isIE || !isEdge))
-       return !isSafari
+        return ((isOpera || isFirefox || isChrome || isEdgeChromium || isBlink) && (!isSafari || !isIE || !isEdge))
+
 }
 
 </script>
