@@ -68,6 +68,6 @@ Loukas is an inovative and detail-oriented Full Stack Developer with over 3 year
 ## Contact Information
 **Location:** Patras, Greece
 **Phone:** [+30 123 456 7890]  
-**Email:** [loukaspandis@gmail.com]  
+**Email:** loukaspandis@gmail.com
 **LinkedIn:** [linkedin.com/in/yourusername](https://www.linkedin.com)  
 **GitHub:** [github.com/LKPcode](https://github.com/LKPcode)  

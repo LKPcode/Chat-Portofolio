@@ -7,9 +7,9 @@
       <path d="M9 8L15 8" stroke="#ea580b" stroke-width="2" stroke-linecap="round"/>
       </svg>
 
-        <div class="pl-4 text-xl font-semibold text-orange-600">
+        <NuxtLink to="/" class="pl-4 text-xl font-semibold text-orange-600">
           LOUKAS.DEV
-        </div>
+        </NuxtLink>
       </div>
       <nav class="flex flex-1 flex-col">
         <ul role="list" class="flex flex-1 flex-col gap-y-7">
