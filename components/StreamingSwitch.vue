@@ -93,7 +93,12 @@ const isBrowserCompatible = () => {
         var isBlink = (isChrome || isOpera) && !!window.CSS;
         console.log('isBlink', isBlink)
 
-        console.log('isBrowserCompatible', ((isOpera || isFirefox || isChrome || isEdgeChromium || isBlink) && (!isSafari || !isIE || !isEdge)))  
+        console.log('isBrowserCompatible', ((isOpera || isFirefox || isChrome || isEdgeChromium || isBlink) && (!isSafari || !isIE || !isEdge)))
+
+        // if everything is false
+        if(!isOpera && !isFirefox && !isChrome && !isEdgeChromium && !isBlink && !isSafari && !isIE && !isEdge) {
+            return true;
+        }
 
         return ((isOpera || isFirefox || isChrome || isEdgeChromium || isBlink) && (!isSafari || !isIE || !isEdge))
 
