@@ -1,6 +1,6 @@
 <template>
     
-<div class="checkbox-wrapper-35">
+<div class="checkbox-wrapper-35 mt-6">
   <input @change="toggle" :checked='state.streamChat.value' name="switch" :id="`switch${rand_id}`" type="checkbox" class="switch" >
   <label :for="`switch${rand_id}`">
     <span class="switch-x-text">Streaming is </span>
@@ -22,13 +22,23 @@ let state = useGlobalState();
 let rand_id = Math.random().toString(36).substring(7);
 
 onMounted( async () => {
-    console.log('streaming switch mounted')
-    changeStreamMode();
-
+    
+    // if localStorage is not set, set the default value, otherwise get the value 
+    // based on browser compatibility from localStorage
+    if(!localStorage.getItem('streamChat')) {
+        localStorage.setItem('streamChat', state.streamChat.value);
+        let isCompatible = state.isBrowserCompatible();
+        state.streamChat.value = isCompatible;
+        changeStreamMode();
+    }else {
+        state.streamChat.value = JSON.parse(localStorage.getItem('streamChat'));
+        changeStreamMode();
+    }
 });
 
 const toggle = () => {
     state.streamChat.value = !state.streamChat.value;
+    localStorage.setItem('streamChat', state.streamChat.value);
     changeStreamMode();
     
 }

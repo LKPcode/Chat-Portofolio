@@ -64,7 +64,6 @@ let renderLikeStream = async (text) => {
             break;
         }
         stream += words[i] + ' ';
-        // console.log('stream', stream);
         const html = window.render(stream, options);
         markdownContent.value.innerHTML = html;
         await new Promise(r => setTimeout(r, 40));

@@ -34,7 +34,12 @@ body {
   display: flex; 
   flex-wrap: wrap;
   gap: 5px;
+  min-height:23px;
+  /* max-width: 1000px; */
+  /* justify */
+  justify-content: left !important;
 }
+
 
 
 #setText>div {
