@@ -3,7 +3,7 @@
 
 <div class="toggle-switch">
   <label class="switch-label">
-    <input @click="toggleDarkMode" v-model="darkMode" type="checkbox" class="checkbox">
+    <input @click="toggleDarkMode" v-model="darkMode" :checked="darkMode" type="checkbox" class="checkbox">
     <span class="slider"></span>
   </label>
 </div>  

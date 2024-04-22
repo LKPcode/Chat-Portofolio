@@ -21,15 +21,16 @@ let state = useGlobalState();
 
 let rand_id = Math.random().toString(36).substring(7);
 
-onMounted( async () => {
+onMounted(() => {
     
     // if localStorage is not set, set the default value, otherwise get the value 
     // based on browser compatibility from localStorage
     if(!localStorage.getItem('streamChat')) {
-        localStorage.setItem('streamChat', state.streamChat.value);
+        console.log('streamChat not set in localStorage, setting default value')
         let isCompatible = isBrowserCompatible();
         state.browserIsCompatible.value = isCompatible;
         state.streamChat.value = isCompatible;
+        localStorage.setItem('streamChat', state.streamChat.value);
         changeStreamMode();
     }else {
         state.streamChat.value = JSON.parse(localStorage.getItem('streamChat'));
@@ -50,12 +51,12 @@ const changeStreamMode = () => {
     if(main && main_child){
 
         if(state.streamChat.value === false) {
-            console.log('not streaming mode')
+            console.log('streaming mode off')
             main.style.display = 'block';
             main.style.flexDirection = '';
             main_child.style.height = '100%';
         }else {
-            console.log('streaming mode')
+            console.log('streaming mode on')
             main.style.display = 'flex';
             main.style.flexDirection = 'column-reverse';
             main_child.style.height = '';
@@ -73,6 +74,7 @@ const isBrowserCompatible = () => {
         var isFirefox = typeof InstallTrigger !== 'undefined';
         // Safari 3.0+ "[object HTMLElementConstructor]" 
         var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+        console.log('isSafari', isSafari)
         // Internet Explorer 6-11
         var isIE = /*@cc_on!@*/false || !!document.documentMode;
         // Edge 20+
@@ -84,14 +86,9 @@ const isBrowserCompatible = () => {
         // Blink engine detection
         var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-        if (isOpera || isFirefox || isChrome || isEdgeChromium || isBlink) {
-            return true;
-        } else {
-            return false;
-        }
+        // return ((isOpera || isFirefox || isChrome || isEdgeChromium || isBlink) && (!isSafari || !isIE || !isEdge))
+       return !isSafari
 }
-
-
 
 </script>
 
