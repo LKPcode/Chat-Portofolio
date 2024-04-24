@@ -2,11 +2,9 @@
 
 Demo: [Chat Portofolio](https://loukas.dev)
 
-A Web Portofolio to present my projects and skills.
-It was inspired by the ChatGPT User Interface.
+A Web Portofolio to present my projects and skills. It was inspired by the ChatGPT User Interface.
 
-Every project is displayed in a chat-like interface, and rendered in a stream like fashion.
-There is no connection to a real LLM, all answers are predefined based on the markdown files in the */public/projects* folder.
+Every project is displayed in a chat-like interface, and rendered in a stream like fashion. There is no connection to a real LLM, all answers are predefined based on the markdown files in the */public/projects* folder.
 
 Created with Nuxt3.js and TailwindCSS.
 

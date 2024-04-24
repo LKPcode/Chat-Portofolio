@@ -1,9 +1,9 @@
 <template>
-      <div class="">
-            <div class="mx-auto" ref="markdownContent">
-                <!-- Markdown Content -->
-            </div>
-            </div>
+    <div class="">
+        <div class="mx-auto" ref="markdownContent">
+            <!-- Markdown Content -->
+        </div>
+    </div>
 </template>
 
 
@@ -52,7 +52,7 @@ let renderLikeStream = async (text) => {
 
     // wait 1 seccond
     if (state.streamChat.value === true) {
-        await new Promise(r => setTimeout(r, 1000));
+        await new Promise(r => setTimeout(r, 500));
     }
 
     // for every word add to the stream and render

@@ -40,7 +40,7 @@
   <div class="lg:pl-72 h-screen">
 
     <!-- Top Bar -->
-    <div class="sticky top-0 z-40 lg:mx-auto lg:max-w-7xl ">
+    <div class="sticky top-0 z-40 lg:mx-auto  ">
       <div class="flex h-16 items-center gap-x-4 border-b border-gray-200 dark:border-slate-900 bg-white dark:bg-slate-700 px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-0 lg:shadow-none">
         
         <!-- Open Sidebar Button -->
