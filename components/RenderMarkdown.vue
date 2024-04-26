@@ -52,7 +52,7 @@ let renderLikeStream = async (text) => {
 
     // wait 1 seccond
     if (state.streamChat.value === true) {
-        await new Promise(r => setTimeout(r, 500));
+        await new Promise(r => setTimeout(r, 800));
     }
 
     // for every word add to the stream and render
@@ -66,7 +66,7 @@ let renderLikeStream = async (text) => {
         stream += words[i] + ' ';
         const html = window.render(stream, options);
         markdownContent.value.innerHTML = html;
-        await new Promise(r => setTimeout(r, 40));
+        await new Promise(r => setTimeout(r, 50));
 
     }
 

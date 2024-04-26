@@ -2,7 +2,7 @@
 
 
 <img src="./profile.jpg" class='profile-pic'>
-Loukas is an inovative and detail-oriented Full Stack Developer with over 3 years of experience in designing, developing, and managing complex web applications and backend services. He has a strong understanding of web technologies, specializing in both front-end and back-end, and a strong ability to translate business requirements into technical solutions. He is passionate about creating high-quality, user-friendly and secure applications.
+Loukas is a detail-oriented Full Stack Developer with over three years of experience in designing, developing, and managing complex web applications and backend services. With a deep understanding of web technologies, he possesses a strong ability to translate business requirements into technical solutions. He is passionate about creating high-quality, user-friendly, and secure applications. Eager to collaborate within a team and learn from new experiences, he loves delving into the core of browser capabilities and pushing for the innovation of new User Experiences.
 
 
 ## Technical Skills
@@ -67,7 +67,6 @@ Loukas is an inovative and detail-oriented Full Stack Developer with over 3 year
 
 ## Contact Information
 **Location:** Patras, Greece
-**Phone:** [+30 123 456 7890]  
-**Email:** loukaspandis@gmail.com
-**LinkedIn:** [linkedin.com/in/yourusername](https://www.linkedin.com)  
-**GitHub:** [github.com/LKPcode](https://github.com/LKPcode)  
+**Email:** pandisloukas@gmail.com
+**LinkedIn:** [Loukas Pandis](https://www.linkedin.com/in/loukas-pandis-2706a0305/)  
+**GitHub:** [LKPcode](https://github.com/LKPcode)  
