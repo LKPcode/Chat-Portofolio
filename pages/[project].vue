@@ -94,10 +94,10 @@ useHead({
 })
 
 useSeoMeta({
-  title: 'Chat Portofolio',
-  ogTitle: 'Chat Portofolio',
-  description: 'A Web Portofolio presented in ChatGPT like style.',
-  ogDescription: 'A Web Portofolio presented in ChatGPT like style.',
+  title: 'Chat Portfolio',
+  ogTitle: 'Chat Portfolio',
+  description: 'A Web Portfolio presented in ChatGPT like style.',
+  ogDescription: 'A Web Portfolio presented in ChatGPT like style.',
   ogImage: 'https://loukas.dev/thumbnail.png',
   twitterCard: 'https://loukas.dev/thumbnail.png',
 })
