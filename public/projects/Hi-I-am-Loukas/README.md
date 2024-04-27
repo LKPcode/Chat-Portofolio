@@ -35,7 +35,7 @@ Loukas is a detail-oriented Full Stack Developer with over three years of experi
 ## Education
 #### MSc. from the Computer Engineering & Informatics Departement (CEID)
 - **University of Patras, Greece**  
-- **Graduated in 2024**
+- **Graduating in 2024**
 
 ## Professional Experience
 
