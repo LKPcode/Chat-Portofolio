@@ -65,7 +65,7 @@
         </div>
 
         <!-- Right Side -->
-        <ThemeSwitch />
+        <!-- <ThemeSwitch /> -->
         
       </div>
     </div>

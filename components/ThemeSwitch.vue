@@ -17,8 +17,22 @@ let darkMode = ref(false);
 
 onMounted(() => {
 
-    document.documentElement.getAttribute('class') === 'dark' ? darkMode.value = false : darkMode.value = true;
+    // Check if the user has set a preference for dark mode
+    // document.documentElement.getAttribute('class') === 'dark' ? darkMode.value = false : darkMode.value = true;
+    // check local storage
+    if (localStorage.getItem('darkMode') === 'true') {
+        darkMode.value = true;
+    } else {
+        darkMode.value = false;
+    }
 
+    
+
+    setTimeout(() => {
+    document.documentElement.setAttribute('class', darkMode.value ? 'light' : 'dark');
+
+        enforceTheme();
+    }, 0);
 });
 
 // watch(() => darkMode, (value) => {
@@ -28,6 +42,25 @@ onMounted(() => {
 //     // toggleDarkMode();
 
 // });
+
+let enforceTheme = () => {
+    if (!darkMode.value) {
+        document.documentElement.setAttribute('class', 'dark');
+        // replace the class .markdown-body-light everywhere to .markdown-body-dark
+        document.querySelectorAll('.markdown-body-light').forEach(function(element) {
+            element.classList.remove('markdown-body-light');
+            element.classList.add('markdown-body-dark');
+        });
+    } else {
+        document.documentElement.setAttribute('class', 'light');
+        // replace the class .markdown-body-dark everywhere to .markdown-body-light
+        document.querySelectorAll('.markdown-body-dark').forEach(function(element) {
+            element.classList.remove('markdown-body-dark');
+            element.classList.add('markdown-body-light');
+        });
+    }
+
+}
 
 let toggleDarkMode = () => {
     console.log('toggleDarkMode', darkMode.value);
